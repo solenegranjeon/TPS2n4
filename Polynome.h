@@ -9,6 +9,7 @@
 #include <fstream>
 #include <cstring>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -40,13 +41,16 @@ class Polynome {
   // =========================================================================
   //                                 Operators
   // =========================================================================
-
-
+	
+	friend Polynome operator+(const Polynome&, const Polynome&);
+	friend Polynome operator-(const Polynome&, const Polynome&);
 
   // =========================================================================
   //                              Public Methods
   // =========================================================================
-
+	void display(void);
+	
+	Polynome diff(void);
 
 	protected :
   // =========================================================================
